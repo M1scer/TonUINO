@@ -2,19 +2,48 @@
 <!DOCTYPE caneda>
 <caneda version="0.3.1">
     <components>
-        <component name="Current Controlled Switch" library="Passive" pos="220,320" transform="1,0,0,1,0,0">
+        <component name="Current Controlled Switch" library="Passive" pos="180,360" transform="1,0,0,1,0,0">
             <properties pos="-24,4">
                 <property name="S0" value="OFF" visible="false"/>
                 <property name="Vnam" value="ON / OFF" visible="false"/>
-                <property name="label" value="ON / OFF" visible="true"/>
+                <property name="label" value="Pause" visible="true"/>
                 <property name="model" value="CSW" visible="false"/>
             </properties>
         </component>
-        <component name="Resistor" library="Passive" pos="-320,360" transform="1,0,0,1,0,0">
+        <component name="Current Controlled Switch" library="Passive" pos="180,390" transform="1,0,0,1,0,0">
+            <properties pos="-24,4">
+                <property name="S0" value="OFF" visible="false"/>
+                <property name="Vnam" value="ON / OFF" visible="false"/>
+                <property name="label" value="Hoch" visible="true"/>
+                <property name="model" value="CSW" visible="false"/>
+            </properties>
+        </component>
+        <component name="Current Controlled Switch" library="Passive" pos="180,420" transform="1,0,0,1,0,0">
+            <properties pos="-24,4">
+                <property name="S0" value="OFF" visible="false"/>
+                <property name="Vnam" value="ON / OFF" visible="false"/>
+                <property name="label" value="Runter" visible="true"/>
+                <property name="model" value="CSW" visible="false"/>
+            </properties>
+        </component>
+        <component name="Resistor" library="Passive" pos="190,190" transform="0,-1,1,0,0,0">
+            <properties pos="-24,6">
+                <property name="R" value="100" visible="true"/>
+                <property name="dtemp" value="1.0" visible="false"/>
+                <property name="label" value="R3" visible="false"/>
+                <property name="m" value="1.0" visible="false"/>
+                <property name="noisy" value="0" visible="false"/>
+                <property name="scale" value="1.0" visible="false"/>
+                <property name="tc1" value="0.0" visible="false"/>
+                <property name="tc2" value="0.0" visible="false"/>
+                <property name="temp" value="26.5" visible="false"/>
+            </properties>
+        </component>
+        <component name="Resistor" library="Passive" pos="-20,180" transform="1,0,0,1,0,0">
             <properties pos="-24,6">
                 <property name="R" value="1k" visible="true"/>
                 <property name="dtemp" value="1.0" visible="false"/>
-                <property name="label" value="R1" visible="false"/>
+                <property name="label" value="R2" visible="false"/>
                 <property name="m" value="1.0" visible="false"/>
                 <property name="noisy" value="0" visible="false"/>
                 <property name="scale" value="1.0" visible="false"/>
@@ -121,11 +150,11 @@
                 <property name="model" value="BC547C" visible="true"/>
             </properties>
         </component>
-        <component name="Resistor" library="Passive" pos="-20,180" transform="1,0,0,1,0,0">
+        <component name="Resistor" library="Passive" pos="-320,360" transform="1,0,0,1,0,0">
             <properties pos="-24,6">
                 <property name="R" value="1k" visible="true"/>
                 <property name="dtemp" value="1.0" visible="false"/>
-                <property name="label" value="R2" visible="false"/>
+                <property name="label" value="R1" visible="false"/>
                 <property name="m" value="1.0" visible="false"/>
                 <property name="noisy" value="0" visible="false"/>
                 <property name="scale" value="1.0" visible="false"/>
@@ -134,119 +163,595 @@
                 <property name="temp" value="26.5" visible="false"/>
             </properties>
         </component>
-        <component name="Resistor" library="Passive" pos="190,190" transform="0,-1,1,0,0,0">
-            <properties pos="-24,6">
-                <property name="R" value="100" visible="true"/>
-                <property name="dtemp" value="1.0" visible="false"/>
-                <property name="label" value="R3" visible="false"/>
-                <property name="m" value="1.0" visible="false"/>
-                <property name="noisy" value="0" visible="false"/>
-                <property name="scale" value="1.0" visible="false"/>
-                <property name="tc1" value="0.0" visible="false"/>
-                <property name="tc2" value="0.0" visible="false"/>
-                <property name="temp" value="26.5" visible="false"/>
+        <component name="Current Controlled Switch" library="Passive" pos="220,320" transform="1,0,0,1,0,0">
+            <properties pos="-24,4">
+                <property name="S0" value="OFF" visible="false"/>
+                <property name="Vnam" value="ON / OFF" visible="false"/>
+                <property name="label" value="ON / OFF" visible="true"/>
+                <property name="model" value="CSW" visible="false"/>
             </properties>
         </component>
     </components>
     <wires>
-        <wire start="120,520" end="190,520"/>
-        <wire start="190,520" end="190,700"/>
-        <wire start="190,700" end="260,700"/>
-        <wire start="150,660" end="260,660"/>
-        <wire start="120,540" end="180,540"/>
-        <wire start="180,540" end="180,580"/>
-        <wire start="-60,540" end="-80,540"/>
-        <wire start="-80,540" end="-80,580"/>
-        <wire start="-80,580" end="-80,590"/>
-        <wire start="-80,590" end="-80,620"/>
-        <wire start="-80,620" end="260,620"/>
-        <wire start="-60,520" end="-90,520"/>
-        <wire start="-90,520" end="-90,600"/>
-        <wire start="-90,600" end="260,600"/>
-        <wire start="260,640" end="-110,640"/>
-        <wire start="-110,640" end="-110,480"/>
-        <wire start="-110,480" end="-60,480"/>
-        <wire start="260,560" end="-100,560"/>
-        <wire start="-100,560" end="-100,500"/>
-        <wire start="-100,500" end="-60,500"/>
+        <wire start="160,420" end="150,420"/>
+        <wire start="160,390" end="150,390"/>
+        <wire start="160,360" end="150,360"/>
+        <wire start="220,480" end="120,480"/>
+        <wire start="220,360" end="220,480"/>
+        <wire start="200,360" end="220,360"/>
+        <wire start="210,460" end="120,460"/>
+        <wire start="210,390" end="210,460"/>
+        <wire start="200,390" end="210,390"/>
+        <wire start="200,440" end="120,440"/>
+        <wire start="200,420" end="200,440"/>
+        <wire start="150,360" end="150,280"/>
         <wire start="150,280" end="120,280"/>
-        <wire start="120,320" end="190,320"/>
-        <wire start="190,320" end="190,230"/>
-        <wire start="-300,360" end="-60,360"/>
-        <wire start="150,660" end="150,580"/>
-        <wire start="-130,420" end="-130,380"/>
-        <wire start="-130,380" end="-60,380"/>
-        <wire start="-370,420" end="-350,420"/>
-        <wire start="-380,440" end="-350,440"/>
-        <wire start="-350,460" end="-390,460"/>
-        <wire start="180,580" end="260,580"/>
-        <wire start="150,660" end="-120,660"/>
-        <wire start="-120,660" end="-120,540"/>
-        <wire start="-130,420" end="-150,420"/>
-        <wire start="-120,540" end="-150,540"/>
-        <wire start="-370,420" end="-370,230"/>
-        <wire start="190,230" end="-370,230"/>
-        <wire start="-380,440" end="-380,360"/>
-        <wire start="-380,360" end="-340,360"/>
-        <wire start="-60,340" end="-390,340"/>
-        <wire start="-390,340" end="-390,460"/>
-        <wire start="-390,520" end="-350,520"/>
-        <wire start="-390,560" end="-350,560"/>
-        <wire start="-40,180" end="-90,180"/>
-        <wire start="-90,180" end="-90,400"/>
-        <wire start="-90,400" end="-60,400"/>
-        <wire start="90,190" end="140,190"/>
-        <wire start="140,190" end="150,190"/>
+        <wire start="170,280" end="150,280"/>
         <wire start="150,190" end="150,280"/>
-        <wire start="0,180" end="40,180"/>
-        <wire start="60,190" end="90,190"/>
-        <wire start="60,170" end="190,170"/>
-        <wire start="190,210" end="190,230"/>
-        <wire start="150,580" end="150,520"/>
-        <wire start="150,520" end="150,280"/>
-        <wire start="360,460" end="330,460"/>
-        <wire start="330,460" end="330,270"/>
-        <wire start="360,520" end="320,520"/>
-        <wire start="320,520" end="320,270"/>
-        <wire start="280,240" end="280,320"/>
-        <wire start="280,320" end="240,320"/>
-        <wire start="200,320" end="190,320"/>
-        <wire start="150,280" end="270,280"/>
-        <wire start="270,280" end="270,240"/>
-        <wire start="40,550" end="40,720"/>
-        <wire start="40,720" end="220,720"/>
+        <wire start="190,700" end="280,700"/>
+        <wire start="150,660" end="280,660"/>
+        <wire start="-110,640" end="280,640"/>
+        <wire start="-80,620" end="280,620"/>
+        <wire start="-90,600" end="280,600"/>
+        <wire start="180,580" end="280,580"/>
+        <wire start="-100,560" end="280,560"/>
+        <wire start="250,400" end="380,400"/>
+        <wire start="150,420" end="150,390"/>
+        <wire start="150,520" end="150,420"/>
+        <wire start="150,390" end="150,360"/>
+        <wire start="260,420" end="380,420"/>
+        <wire start="340,270" end="340,240"/>
+        <wire start="350,270" end="350,240"/>
+        <wire start="20,730" end="240,730"/>
         <wire start="20,550" end="20,730"/>
-        <wire start="20,730" end="230,730"/>
-        <wire start="330,270" end="330,240"/>
-        <wire start="320,270" end="320,240"/>
-        <wire start="220,720" end="220,420"/>
-        <wire start="220,420" end="220,400"/>
-        <wire start="220,400" end="360,400"/>
-        <wire start="230,730" end="230,420"/>
-        <wire start="230,420" end="360,420"/>
+        <wire start="40,720" end="230,720"/>
+        <wire start="40,550" end="40,720"/>
+        <wire start="290,280" end="290,240"/>
+        <wire start="170,280" end="290,280"/>
+        <wire start="200,320" end="190,320"/>
+        <wire start="300,320" end="260,320"/>
+        <wire start="300,240" end="300,320"/>
+        <wire start="340,520" end="340,270"/>
+        <wire start="380,520" end="340,520"/>
+        <wire start="350,460" end="350,270"/>
+        <wire start="380,460" end="350,460"/>
+        <wire start="150,580" end="150,520"/>
+        <wire start="190,210" end="190,230"/>
+        <wire start="60,170" end="190,170"/>
+        <wire start="60,190" end="90,190"/>
+        <wire start="0,180" end="40,180"/>
+        <wire start="140,190" end="150,190"/>
+        <wire start="90,190" end="140,190"/>
+        <wire start="-90,400" end="-60,400"/>
+        <wire start="-90,180" end="-90,400"/>
+        <wire start="-40,180" end="-90,180"/>
+        <wire start="-390,560" end="-350,560"/>
+        <wire start="-390,520" end="-350,520"/>
+        <wire start="-390,340" end="-390,460"/>
+        <wire start="-60,340" end="-390,340"/>
+        <wire start="-380,360" end="-340,360"/>
+        <wire start="-380,440" end="-380,360"/>
+        <wire start="190,230" end="-370,230"/>
+        <wire start="-370,420" end="-370,230"/>
+        <wire start="-120,540" end="-150,540"/>
+        <wire start="-130,420" end="-150,420"/>
+        <wire start="-120,660" end="-120,540"/>
+        <wire start="150,660" end="-120,660"/>
+        <wire start="-350,460" end="-390,460"/>
+        <wire start="-380,440" end="-350,440"/>
+        <wire start="-370,420" end="-350,420"/>
+        <wire start="-130,380" end="-60,380"/>
+        <wire start="-130,420" end="-130,380"/>
+        <wire start="150,660" end="150,580"/>
+        <wire start="-300,360" end="-60,360"/>
+        <wire start="190,320" end="190,230"/>
+        <wire start="120,320" end="190,320"/>
+        <wire start="-100,500" end="-60,500"/>
+        <wire start="-100,560" end="-100,500"/>
+        <wire start="-110,480" end="-60,480"/>
+        <wire start="-110,640" end="-110,480"/>
+        <wire start="-90,520" end="-90,600"/>
+        <wire start="-60,520" end="-90,520"/>
+        <wire start="-80,590" end="-80,620"/>
+        <wire start="-80,580" end="-80,590"/>
+        <wire start="-80,540" end="-80,580"/>
+        <wire start="-60,540" end="-80,540"/>
+        <wire start="180,540" end="180,580"/>
+        <wire start="120,540" end="180,540"/>
+        <wire start="190,520" end="190,700"/>
+        <wire start="120,520" end="190,520"/>
     </wires>
     <paintings>
-        <painting name="text" pos="-260,460" transform="0,-1,1,0,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;DfPlayer Mini&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        <painting name="text" pos="280,160" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Powerbank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
         </painting>
-        <painting name="rectangle" rectangle="-10,0,118.719,170" pos="-300,400" transform="1,0,0,1,0,0">
+        <painting name="text" pos="280,200" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;OUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="30,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="10,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="280,220" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="300,220" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="350,220" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="330,220" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="460,450" transform="0,-1,1,0,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB-C Anschluss&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;(B-Seite wird nicht verwendet)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,350" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,450" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;VCC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,430" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,470" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,510" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,490" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,330" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A11&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,370" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,410" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="420,390" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,380" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,420" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,400" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,340" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,360" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,480" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,520" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,500" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,440" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="380,460" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="470,450" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="rectangle" rectangle="0,0,-40,30" pos="500,450" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
             <brush color="#000000" style="0"/>
         </painting>
-        <painting name="text" pos="-270,550" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SD Karte&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="rectangle" rectangle="0,10,50,30" pos="-280,530" transform="1,0,0,1,0,0">
+        <painting name="rectangle" rectangle="-30,-20,-80,200" pos="530,350" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
             <brush color="#000000" style="0"/>
         </painting>
-        <painting name="line" line="0,0,40,0" pos="-190,520" transform="1,0,0,1,0,0">
+        <painting name="text" pos="330,200" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="rectangle" rectangle="0,0,30,-40" pos="330,240" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="rectangle" rectangle="-10,0,30,-40" pos="290,240" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="rectangle" rectangle="20,90,100,80" pos="250,70" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="text" pos="-500,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Speaker&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,20,0" pos="-410,560" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
-        <painting name="line" line="0,0,40,0" pos="-190,500" transform="1,0,0,1,0,0">
+        <painting name="line" line="0,0,20,0" pos="-410,520" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
-        <painting name="line" line="0,0,40,0" pos="-190,440" transform="1,0,0,1,0,0">
+        <painting name="text" pos="-430,550" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;+&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-430,510" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,-10,60,-30" pos="-510,600" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,0,100" pos="-510,490" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,-60,-20" pos="-450,510" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="rectangle" rectangle="0,0,-40,60" pos="-410,510" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="text" pos="18.5547,520" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="rectangle" rectangle="0,0,40,-30" pos="10,550" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="rectangle" rectangle="0,0,100,310" pos="-20,240" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="text" pos="57.2031,450" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,430" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,350" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="50.2969,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D13&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="52.7656,510" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;3V3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,470" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="50.1094,270" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,370" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="51.2031,290" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RST&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="53.8125,250" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;VIN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="56.2656,310" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;5V&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="52.125,490" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;REF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,330" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,410" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="57.2031,390" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,400" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,420" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,540" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,540" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,480" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,280" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,260" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,320" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,400" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,300" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,500" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,480" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,360" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,520" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,340" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,460" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,380" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="80,440" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,510" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D11&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,540" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,540" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,490" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-20,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D12&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,500" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,520" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,440" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,430" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-20,450" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,480" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,480" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,420" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,410" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,460" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,470" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D9&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,380" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,310" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-20,350" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,340" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,360" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,330" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-20,390" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,260" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,280" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,250" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;TX1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,400" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,320" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,290" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RST&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,300" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,270" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RX0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-60,400" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-20,370" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="410,610" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;RFID&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;RC522&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="rectangle" rectangle="-10,0,170,160" pos="330,550" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+            <brush color="#000000" style="0"/>
+        </painting>
+        <painting name="text" pos="320,610" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;MISO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,690" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;3.3V&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,650" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,590" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;MOSI&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,570" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SCK&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,670" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RST&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,630" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IRQ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="320,550" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SDA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,680" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,580" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,640" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,560" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,660" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,620" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,700" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,700" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="280,600" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,440" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,460" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,480" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,500" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,520" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,540" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,560" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,560" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-350,420" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="text" pos="-310,410" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;VCC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,430" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,450" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;TX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,470" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;DAC-R&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,490" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;DAC-L&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,510" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SPK1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-310,550" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SPK2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-220,430" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-220,530" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-220,450" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-210,550" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IO1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-230,490" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;AdKey1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-210,510" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IO2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-220,410" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;Busy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="text" pos="-230,470" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;AdKey2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-190,420" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-190,540" transform="1,0,0,1,0,0">
+            <pen width="1" color="#808080" style="1"/>
+        </painting>
+        <painting name="line" line="0,0,40,0" pos="-190,460" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
         <painting name="line" line="0,0,40,0" pos="-190,560" transform="1,0,0,1,0,0">
@@ -258,497 +763,28 @@
         <painting name="line" line="0,0,40,0" pos="-190,560" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
-        <painting name="line" line="0,0,40,0" pos="-190,460" transform="1,0,0,1,0,0">
+        <painting name="line" line="0,0,40,0" pos="-190,440" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
-        <painting name="line" line="0,0,40,0" pos="-190,540" transform="1,0,0,1,0,0">
+        <painting name="line" line="0,0,40,0" pos="-190,500" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
-        <painting name="line" line="0,0,40,0" pos="-190,420" transform="1,0,0,1,0,0">
+        <painting name="line" line="0,0,40,0" pos="-190,520" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
         </painting>
-        <painting name="text" pos="-230,470" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;AdKey2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-220,410" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;Busy&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-210,510" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IO2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-230,490" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;AdKey1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-210,550" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IO1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-220,450" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-220,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-220,430" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,550" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SPK2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,510" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SPK1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,490" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;DAC-L&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,470" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;DAC-R&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,450" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;TX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,430" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RX&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-310,410" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;VCC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,420" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,560" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,560" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,540" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,520" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,500" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,480" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,460" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-350,440" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,600" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,700" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,700" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,620" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,660" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,560" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,640" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,580" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="260,680" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="300,550" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SDA&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,630" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IRQ&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,670" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RST&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,570" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SCK&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,590" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;MOSI&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,650" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,690" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;3.3V&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="300,610" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;MISO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="rectangle" rectangle="-10,0,170,160" pos="310,550" transform="1,0,0,1,0,0">
+        <painting name="rectangle" rectangle="0,10,50,30" pos="-280,530" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
             <brush color="#000000" style="0"/>
         </painting>
-        <painting name="text" pos="390,610" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;RFID&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;RC522&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        <painting name="text" pos="-270,550" transform="1,0,0,1,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;SD Karte&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
         </painting>
-        <painting name="text" pos="-20,370" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,400" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,270" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RX0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,300" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,290" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RST&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,320" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,400" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,250" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;TX1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,280" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,260" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,390" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-20,330" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,360" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,340" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,350" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-20,310" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,380" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,470" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D9&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,460" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,410" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,420" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,480" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,480" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,450" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-20,430" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,440" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,520" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,500" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D12&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-20,490" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,540" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="-60,540" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-20,510" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D11&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,440" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,380" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,460" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,340" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,520" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,360" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,480" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,500" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,300" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,400" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,320" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,260" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,280" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,480" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,540" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,540" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,420" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="80,400" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="57.2031,390" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A4&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,410" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,330" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="52.125,490" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;REF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="56.2656,310" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;5V&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="53.8125,250" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;VIN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="51.2031,290" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;RST&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,370" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="50.1094,270" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,470" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A0&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="52.7656,510" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;3V3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="50.2969,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D13&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,350" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,430" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="57.2031,450" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A1&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="rectangle" rectangle="0,0,100,310" pos="-20,240" transform="1,0,0,1,0,0">
+        <painting name="rectangle" rectangle="-10,0,118.719,170" pos="-300,400" transform="1,0,0,1,0,0">
             <pen width="1" color="#808080" style="1"/>
             <brush color="#000000" style="0"/>
         </painting>
-        <painting name="rectangle" rectangle="0,0,40,-30" pos="10,550" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="text" pos="18.5547,520" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="rectangle" rectangle="0,0,-40,60" pos="-410,510" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="line" line="0,0,-60,-20" pos="-450,510" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,0,100" pos="-510,490" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,-10,60,-30" pos="-510,600" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-430,510" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;-&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="-430,550" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;+&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,20,0" pos="-410,520" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,20,0" pos="-410,560" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="-500,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;Speaker&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="rectangle" rectangle="20,90,100,80" pos="230,70" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="rectangle" rectangle="-10,0,30,-40" pos="270,240" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="rectangle" rectangle="0,0,30,-40" pos="310,240" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="text" pos="310,200" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="rectangle" rectangle="-30,-20,-80,200" pos="510,350" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="rectangle" rectangle="0,0,-40,30" pos="480,450" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-            <brush color="#000000" style="0"/>
-        </painting>
-        <painting name="text" pos="450,450" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;IN&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,460" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,440" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,500" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,520" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,480" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,360" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,340" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,400" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,420" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="line" line="0,0,40,0" pos="360,380" transform="1,0,0,1,0,0">
-            <pen width="1" color="#808080" style="1"/>
-        </painting>
-        <painting name="text" pos="400,390" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A7&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,410" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A6&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,370" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A8&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,330" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A11&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,490" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,510" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;GND&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,470" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,430" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A5&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,450" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;VCC&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="400,350" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;A10&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="440,450" transform="0,-1,1,0,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB-C Anschluss&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;(B-Seite wird nicht verwendet)&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="310,220" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="330,220" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="280,220" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="260,220" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="10,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D+&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="30,530" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;D-&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="260,200" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;USB&lt;/span&gt;&lt;/p&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;OUT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
-        </painting>
-        <painting name="text" pos="260,160" transform="1,0,0,1,0,0">
-            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Powerbank&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
+        <painting name="text" pos="-260,460" transform="0,-1,1,0,0,0">
+            <properties text="&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;&#10;p, li { white-space: pre-wrap; }&#10;&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Ubuntu'; font-size:11pt; font-weight:400; font-style:normal;&quot;&gt;&#10;&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:6pt;&quot;&gt;DfPlayer Mini&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"/>
         </painting>
     </paintings>
 </caneda>
