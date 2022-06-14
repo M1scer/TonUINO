@@ -11,10 +11,11 @@
   |_   _|___ ___|  |  |     |   | |     |
     | | | . |   |  |  |-   -| | | |  |  |
     |_| |___|_|_|_____|_____|_|___|_____|
-    TonUINO Version 2.1
+    TonUINO Version 2.2
 
     created by Thorsten Voß and licensed under GNU/GPL.
     Information and contribution at https://tonuino.de.
+    modified by Clemens Jehle.
 */
 
 // uncomment the below line to enable five button support
@@ -667,6 +668,11 @@ bool ignoreButtonFour = false;
 bool ignoreButtonFive = false;
 #endif
 
+/// Keep PowerBank on
+#define powerpin 5
+unsigned long previousmillispower = 0;
+unsigned long powerintervalmax = 28000;
+
 /// Funktionen für den Standby Timer (z.B. über Pololu-Switch oder Mosfet)
 
 void setstandbyTimer() {
@@ -679,8 +685,8 @@ void setstandbyTimer() {
 }
 
 void disablestandbyTimer() {
-  Serial.println(F("=== disablestandby()"));
-  sleepAtMillis = 0;
+   Serial.println(F("=== disablestandby()"));
+   sleepAtMillis = 0;
 }
 
 void checkStandbyAtMillis() {
@@ -778,6 +784,9 @@ void setup() {
   pinMode(shutdownPin, OUTPUT);
   digitalWrite(shutdownPin, LOW);
 
+  pinMode(powerpin,OUTPUT);
+  digitalWrite(powerpin, LOW);
+
 
   // RESET --- ALLE DREI KNÖPFE BEIM STARTEN GEDRÜCKT HALTEN -> alle EINSTELLUNGEN werden gelöscht
   if (digitalRead(buttonPause) == LOW && digitalRead(buttonUp) == LOW &&
@@ -802,6 +811,7 @@ void readButtons() {
   buttonFour.read();
   buttonFive.read();
 #endif
+keepPowerbankAlive();
 }
 
 void volumeUpButton() {
@@ -945,7 +955,21 @@ void playShortCut(uint8_t shortCut) {
     Serial.println(F("Shortcut not configured!"));
 }
 
-void loop() {
+void keepPowerbankAlive() {
+      if ((millis() - previousmillispower) > powerintervalmax && !digitalRead(shutdownPin)) 
+      {
+        previousmillispower = millis();
+        digitalWrite(powerpin,HIGH);
+        Serial.println("PowerPin HIGH");
+      }
+    if ((millis() - previousmillispower) > 500 && digitalRead(powerpin))
+      {
+        digitalWrite(powerpin,LOW);
+        Serial.println("PowerPin LOW");
+    }
+}
+
+void loop() {    
   do {
     checkStandbyAtMillis();
     mp3.loop();
@@ -1091,6 +1115,8 @@ void loop() {
 #endif
     // Ende der Buttons
   } while (!mfrc522.PICC_IsNewCardPresent());
+
+  keepPowerbankAlive();
 
   // RFID Karte wurde aufgelegt
 

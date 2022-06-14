@@ -4,6 +4,10 @@ Die DIY Musikbox (nicht nur) für Kinder
 
 # Change Log
 
+## Version 2.2 (14.06.2022)
+- Digitalausgang eingefügt der die Powerbank "wach" hält
+- Schaltplan um Ein / Aus Schalter, Powerbank und USB-C Buchse ergänzt. Über die Buchse kann die Powerbank geladne werden und gleichzeitig (bei richtiger Polung) dient sie als Programmierschnittstelle
+
 ## Version 2.1 (xx.xx.xxxx) noch WIP
 - Partymodus hat nun eine Queue -> jedes Lied kommt nur genau 1x vorkommt
 - Neue Wiedergabe-Modi "Spezialmodus Von-Bis" - Hörspiel, Album und Party -> erlaubt z.B. verschiedene Alben in einem Ordner zu haben und je mit einer Karte zu verknüpfen
