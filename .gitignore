@@ -29,3 +29,9 @@ Temporary Items
 
 # TonUINO
 /tools/*.pyc
+.vscode/arduino.json
+.gitignore
+.vscode/c_cpp_properties.json
+.gitignore
+.gitignore
+Arduino-SDKarte.xlsx
