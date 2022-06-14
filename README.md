@@ -1,7 +1,7 @@
 # TonUINO
 Die DIY Musikbox (nicht nur) für Kinder
 
-Zur erstellung des Schaltplans wurde "Candela" verwendet.
+Zur Erstellung des Schaltplans wurde "Candela" verwendet.
 
 # Change Log
 
